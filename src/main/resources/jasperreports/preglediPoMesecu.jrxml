@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="preglediPoMesecu" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="880018d8-82e1-4b59-b798-2d695706bd88">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="datum" class="java.lang.String"/>
+	<field name="broj" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="10" width="230" height="50" uuid="038771d2-65f0-43d7-8ca1-45eadfcd1cea"/>
+				<text><![CDATA[Broj zakazanih pregleda po mesecima]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="0" width="100" height="30" uuid="dc9faed6-1e50-450d-bac2-3c279a4312bd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55cc8fde-83b5-4d89-8661-81d5af1f8c1a"/>
+				</reportElement>
+				<text><![CDATA[datum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="100" height="30" uuid="20637e9a-aace-418b-b9b4-3987fb1250fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd68f9e2-9a9b-4fb8-a3a0-145814ef284d"/>
+				</reportElement>
+				<text><![CDATA[broj]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="18" width="100" height="30" uuid="7437a82b-85d1-41ae-96d4-f02c935225e9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55cc8fde-83b5-4d89-8661-81d5af1f8c1a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{datum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="18" width="100" height="30" uuid="fd3b1d54-1223-4719-8f94-8ca2b3f1f811">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd68f9e2-9a9b-4fb8-a3a0-145814ef284d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{broj}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="445" y="12" width="100" height="30" uuid="b3e929ec-f376-42ad-ab08-5d05712c0853"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="karton" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a561a56b-3a63-4c1a-9f1c-45a27641e2cb">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="ime" class="java.lang.String"/>
+	<parameter name="prezime" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dijagnoza" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="10" width="90" height="30" uuid="8089f527-6e44-44f3-8fd1-5361fb25b22c"/>
+				<text><![CDATA[Karton pacijenta]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="10" width="50" height="30" uuid="e9e744ed-b3e4-4360-9b1e-1c83d4a468fc"/>
+				<textFieldExpression><![CDATA[$P{ime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="10" width="100" height="30" uuid="1d4ce402-13d5-4562-b3ad-ca8a8aa84af7"/>
+				<textFieldExpression><![CDATA[$P{prezime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="20" width="100" height="30" uuid="dc6f1ca7-0ce3-4116-be39-80a9426d1880"/>
+				<text><![CDATA[dijagnoze:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="10" width="100" height="30" uuid="52bf501a-1e29-475e-a2be-a684ca62e913">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0654b5b-d60e-496c-85b1-906c4fa7fd3a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dijagnoza}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="20" width="100" height="30" uuid="c3cce31d-c788-4b7e-a49f-85d1f6087fa6"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
