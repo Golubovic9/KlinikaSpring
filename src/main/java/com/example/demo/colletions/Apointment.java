@@ -1,5 +1,9 @@
 package com.example.demo.colletions;
 
+
+// Klasa koriscena kao datasource prilikom kreiranja jasper izvestaja u metodi
+// preglediUMesecu()  pacijent controlera; izvestaj pokazuje broj zakazanih pregleda u svakom
+// mesecu
 public class Apointment {
 		private String datum;
 		private Long broj;

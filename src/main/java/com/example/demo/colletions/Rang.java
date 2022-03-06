@@ -2,6 +2,8 @@ package com.example.demo.colletions;
 
 import model.Lekar;
 
+// Klasa koriscena da kao datasource prilikom kreiranja jasper izvestaja u metodi
+// oceneSvihLekara()  pacijent controlera
 public class Rang {
 	private Lekar l ;
 	private float rang;

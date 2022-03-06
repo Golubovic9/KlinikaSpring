@@ -299,6 +299,13 @@ public class PacijentController {
 //		JasperExportManager.exportReportToPdfStream(jasperPrint,out);
 //	}
 	
+	
+// Zbog nacina na koji sam modelirao bazu podataka logovanog korisnika sam dobijao ovom metodom
+// u fajl Korisnici.txt sam prilikom registracije korisnika
+// u jednu liniju upisivao id Korisnika i id Pacijenta ili Lekara 
+// u zavisnosti od uloge i to u formatu "idKorisnik;idLekar/idPacijent"
+// preko principle objekta sam dobijao idKorisnik i na osnovu toga dovlacio 
+// iz fajla idLekar/idPacijent i dobijao odgovarajuci objekat klase Lekar ili Pacijent
 	public Lekar getLogedLekar() throws IOException {
 		Object au = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String username;
