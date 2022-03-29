@@ -84,14 +84,15 @@ public class LekarController {
 	}
 	
 	@RequestMapping(value="/zakaziPregled",method=RequestMethod.POST)
-	public String zakaziPregled(Integer doc,Date datum) throws IOException {
+	public String zakaziPregled(Integer doc,Date datum,Model m) throws IOException {
 		Pregled p = new Pregled();
 		p.setDatum(datum);
 		p.setLekar(lr.findById(doc).get());
 		Pacijent pacijent = getLogedPacijent();
 		p.setPacijent(pacijent);
 		pregledRep.save(p);
-		return "pocetna";
+		m.addAttribute("dejt", datum);
+		return "zakazivanjePregleda";
 	}
 	
 	@RequestMapping(value="/showDoctors", method=RequestMethod.GET)

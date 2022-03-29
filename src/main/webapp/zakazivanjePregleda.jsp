@@ -19,5 +19,8 @@
 		<input type="date" name="datum">
 		<input type="submit" value="zakazi">
 	</form>
+	<c:if test="${!empty dejt }">
+		${dejt }
+	</c:if>
 </body>
 </html>
